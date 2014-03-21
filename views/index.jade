@@ -1,18 +1,129 @@
 extends layout
 
 block content
-  h1= title
-  p 敬请期待！
-  .container-fluid
-    .row-fluid
-      .span12
-        h1.text-success
-          strong 餐饮云
-        address
-          strong Sconfield, Inc
-          br
-          重庆
-          br
-          abbr(title='Phone') 电话：(023) 12345678
-        p.lead.text-info
-          em 各种需求，各种资源，各种渠道，以及各种爱。终将改变你的生活方式，敬请期待！
+  // side menu
+  a#menu-toggle.btn.btn-primary.btn-lg.toggle(href='#')
+    i.glyphicon.glyphicon-th-list
+  #sidebar-wrapper
+    ul.sidebar-nav
+      a#menu-close.btn.btn-default.btn-lg.pull-right.toggle(href='#')
+        i.glyphicon.glyphicon-remove-sign
+      li.sidebar-brand
+        a(href='#')= title
+      for menu in menus
+        li
+          a(href='\##{menu.us}')= menu.zh
+
+  // full page image header area
+  #top.header
+    .vert-text
+      h1= title
+      h3
+        em 我们
+        为你提供各式各样的选择
+        strong 你
+        将享受方便快捷的美味
+      a.btn.btn-default.btn-lg 让我看看
+
+  // intro
+  #about.intro
+    .container
+      .row
+        .col-md-6.col-md-offset-3.text-center
+          h2 我们是来之星星的梦想家
+          p.lead 这里将满足你的所有食欲，尽情的浏览吧！
+
+  // Services
+  #services.services
+    .container
+      .row
+        .col-md-4.col-md-offset-4.text-center
+          h2 我们的服务
+          hr
+      .row
+        .col-md-2.col-md-offset-2.text-center
+          .service-item
+            i.glyphicon.glyphicon-cloud.service-icon
+            h4 云端选餐
+            p 许许多多来自星星的美食
+        .col-md-2.text-center
+          .service-item
+            i.glyphicon.glyphicon-cutlery.service-icon
+            h4 快捷送餐
+            p 每个要塞安排一位厨神，长腿哦吧分分钟送到
+        .col-md-2.text-center
+          .service-item
+            i.glyphicon.glyphicon-file.service-icon
+            h4 我的菜单
+            p 比比谁更快，最快订餐方式，我的模板我做主，一点就搞定
+            a(href='#') （指定套餐）
+        .col-md-2.text-center
+          .service-item
+            i.glyphicon.glyphicon-thumbs-up.service-icon
+            h4 好吃要点赞哦
+            p 套餐排名，好吃的都在最前面
+
+  // callout
+  .callout
+    .vert-text
+      h1 生活节奏很快，但是我还是可以慢慢吃哟，因为
+        strong #{title}
+        一点就到！
+
+  // portfolio
+  #portfolio.portfolio
+    .container
+      .row
+        .col-md-4.col-md-offset-2.text-center
+          .portfolio-item
+            a(href='#')
+              img.img-portfolio.img-responsive(src='images/portfolio-1.jpg')
+            h4 流氓的生活
+        .col-md-4.text-center
+          .portfolio-item
+            a(href='#')
+              img.img-portfolio.img-responsive(src='images/portfolio-2.jpg')
+            h4 火辣的妹子
+      .row
+        .col-md-4.col-md-offset-2.text-center
+          .portfolio-item
+            a(href='#')
+              img.img-portfolio.img-responsive(src='images/portfolio-3.jpg')
+            h4 各种欢愉
+        .col-md-4.text-center
+          .portfolio-item
+            a(href='#')
+              img.img-portfolio.img-responsive(src='images/portfolio-4.jpg')
+            h4 立马高富帅
+
+  // call to action
+  .call-to-action
+    .container
+      .row
+        .col-md-6.col-md-offset-3.text-center
+          h3 下面的按钮就是引诱你的
+          a.btn.btn-lg.btn-default(href='#') 点我
+          a.btn.btn-lg.btn-primary(href='#') 关注我
+
+  // map
+  #contact.map
+    iframe(width='100%',height='100%',frameborder='0',scrolling='no'
+      marginheight='0',marginwidth='0',src='http://j.map.baidu.com/nYvgA')
+
+  // footer
+  footer
+    .container
+      .row
+        .col-md-6.col-md-offset-3.text-center
+        ul.list-inline
+          li
+            i.glyphicon.glyphicon-user
+          li
+            i.glyphicon.glyphicon-bold
+          li
+            i.glyphicon.glyphicon-comment
+        .top-scroll
+          a(href='#top')
+            i.glyphicon.glyphicon-chevron-up
+        hr
+        p Copyright &copy; Company 2014

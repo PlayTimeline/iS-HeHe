@@ -1,6 +1,173 @@
+// function
+background-size(path)
+  background: url(path) no-repeat center center fixed
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+transition()
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -ms-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+
+// global
+html,
 body
-  padding: 50px
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
-  background-color: #8DCEA9
-a
-  color: #00B7FF
+  height: 100%
+  width: 100%
+.vert-text
+  display: table-cell
+  vertical-align: middle
+  text-align: center
+  color: cornsilk
+  h1
+    padding: 0
+    margin: 0
+    font-size: 4.5em
+    font-weight: 700
+
+// side menu
+#sidebar-wrapper
+  margin-right: -250px
+  right: 0
+  width: 250px
+  background: fixed;
+  height: 100%
+  overflow-y: auto
+  z-index: 1000
+  transition()
+  .active
+    right: 250px
+    width: 250px
+    transition()
+
+.sidebar-nav
+  position: absolute
+  top: 0
+  width: 250px
+  list-style: none
+  margin: 0
+  padding: 0
+  li
+    line-height: 40px
+    text-indent: 25px
+    a
+      color: #999999
+      display: block
+      text-decoration: none
+    a:hover
+      color: #fff
+      background: rgba(255,255,255,0.2)
+      text-decoration: none
+.sidebar-nav li
+  a:active,
+  a:focus
+    text-decoration: none
+
+.sidebar-nav > .sidebar-brand
+  height: 55px
+  line-height: 55px
+  font-size: 18px
+  a
+    color: #999999
+  a:hover
+    color: #fff
+    background: none
+
+#menu-toggle
+  top: 0
+  right: 0
+  position: fixed
+  z-index: 1
+
+.toggle
+  margin: 5px 5px 0 0
+
+// full page image header area
+.header
+  display: table
+  height: 100%
+  width: 100%
+  position: relative
+  background-size('../images/bg.jpg')
+
+// intro
+.intro
+  padding: 50px 0
+
+// services
+.services
+  background: #7fbbda
+  padding: 50px 0
+  color: #ffffff
+
+.service-item
+  margin-bottom: 15px
+
+.service-icon
+  border: 3px solid #ffffff
+  border-radius: 50%
+  display: inline-block
+  font-size: 56px
+  width: 140px
+  height: 140
+  line-height: 136px
+  vertical-align: middle
+  text-align: center
+
+// callout
+.callout
+  color: #ffffff
+  display: table
+  height: 400px
+  width: 100%
+  background-size('../images/callout.jpg')
+
+// portfolio
+.portfolio
+  padding: 50px 0
+
+.portfolio-item
+  margin-bottom: 25px
+
+.img-portfolio
+  margin: 0 auto
+
+// call to action
+.call-to-action
+  color: #ffffff
+  background: #0a5175
+  padding: 50px 0
+  .btn
+    margin: 10px
+
+// map
+.map
+  height: 500px
+
+// footer
+footer
+  padding: 100px 0
+
+.top-scroll
+  margin-top: 50px
+  a
+    text-decoration: none
+    color: inherit
+
+i.scroll
+  color: #333333
+  :hover
+    color: #0a5175
+
+// responsive
+@media (max-width: 768px)
+  .header
+    background: url(../images/bg.jpg) no-repeat center center scroll
+  .callout
+    background: url(../images/callout.jpg) no-repeat center center scroll
+  .map
+    height: 75%
