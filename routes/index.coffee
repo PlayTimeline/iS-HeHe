@@ -10,3 +10,6 @@ menuList =[
 
 exports.index = (req, res) ->
   res.render('index', {title: '抢饭网', menus: menuList})
+
+exports.map = (req, res) ->
+  res.render('map')

@@ -34,12 +34,14 @@ body
   margin-right: -250px
   right: 0
   width: 250px
-  background: fixed;
+  background: #000
+  position: fixed
   height: 100%
   overflow-y: auto
   z-index: 1000
   transition()
-  .active
+
+#sidebar-wrapper.active
     right: 250px
     width: 250px
     transition()
@@ -53,7 +55,7 @@ body
   padding: 0
   li
     line-height: 40px
-    text-indent: 25px
+    text-indent: 20px
     a
       color: #999999
       display: block
@@ -152,16 +154,17 @@ body
 footer
   padding: 100px 0
 
-.top-scroll
-  margin-top: 50px
-  a
-    text-decoration: none
-    color: inherit
-
 i.scroll
   color: #333333
   :hover
     color: #0a5175
+
+.company
+  text-shadow: 20px 15px 5px #000000
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  writing-mode: bt-lr;
 
 // responsive
 @media (max-width: 768px)

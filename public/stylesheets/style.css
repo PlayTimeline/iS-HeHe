@@ -19,7 +19,8 @@ body {
   margin-right: -250px;
   right: 0;
   width: 250px;
-  background: fixed;
+  background: #000;
+  position: fixed;
   height: 100%;
   overflow-y: auto;
   z-index: 1000;
@@ -29,7 +30,7 @@ body {
   -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
 }
-#sidebar-wrapper .active {
+#sidebar-wrapper.active {
   right: 250px;
   width: 250px;
   -webkit-transition: all 0.4s ease 0s;
@@ -48,7 +49,7 @@ body {
 }
 .sidebar-nav li {
   line-height: 40px;
-  text-indent: 25px;
+  text-indent: 20px;
 }
 .sidebar-nav li a {
   color: #999;
@@ -152,18 +153,18 @@ body {
 footer {
   padding: 100px 0;
 }
-.top-scroll {
-  margin-top: 50px;
-}
-.top-scroll a {
-  text-decoration: none;
-  color: inherit;
-}
 i.scroll {
   color: #333;
 }
 i.scroll :hover {
   color: #0a5175;
+}
+.company {
+  text-shadow: 20px 15px 5px #000;
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+  writing-mode: bt-lr;
 }
 @media (max-width: 768px) {
   .header {
